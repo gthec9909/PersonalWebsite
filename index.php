@@ -1,13 +1,8 @@
 <?php
-session_start();
-if ($_SESSION['submitted']) {
-    echo "<div class=\"alert alert-success\" role=\"alert\">Message submitted!</div>";
-    $_SESSION['submitted'] = false;
-}
 ?>
 
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <title>Homepage</title>
     <meta charset="utf-8">
@@ -15,40 +10,45 @@ if ($_SESSION['submitted']) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <style>
+        a {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:hover {
+          color: #6d6d6d;
+        }
+    </style>
 </head>
 
 <body>
 <div class="jumbotron text-center">
     <div class="container">
-        <img src="logo.PNG">
+        <h1>George A. Clark</h1>
+        <h4>123 Address St. Halifax Nova Scotia | 902-555-5555 | george.clark@dal.ca</h4>
     </div>
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="col" id="homeHead">
+                    <a href="index.php">Home & About</a>
+                </div>
+                <div class="row">
+                    |
+                </div>
+                <div class="col" id="resumeHead">
+                    <a href="resume.php">Resume</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 </div>
 
 
 <div class="jumbotron text-center" >
     <div class="container">
-        <form action="submitQuote.php" id="submissionForm" method="post">
-            <!-- updateTime.php here -->
-            <h2><label for="quote">What horrible thing was said?</label></h2>
-            <br>
-            <div class="form-group">
-                <textarea id="quote" name="quote" class="form-control" required></textarea>
-            </div>
-            <h2><label for="person">Who said it?</label></h2>
-            <br>
-            <select id="person" name="person">
-                <option value="Main Daddy">Main Daddy</option>
-                <option value="The Mom">The Mom</option>
-                <option value="Small Quick Spanking Hands">Small Quick Spanking Hands</option>
-                <option value="Thicc Dirty Blonde">Thicc Dirty Blonde</option>
-                <option value="Agatha Clitsie">Agatha Clitsie</option>
-                <option value="Little Soup Boy">Little Soup Boy</option>
-                <option value="Geordaddy">Geordaddy</option>
-            </select>
-            <br> <br>
-            <button class="btn btn-primary">Submit Debauchery</button>
-        </form>
-
+        <p>This will be my about section</p>
     </div>
 </div>
 </body>
